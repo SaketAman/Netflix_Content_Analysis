@@ -1,4 +1,5 @@
-<img width="1164" height="654" alt="Screenshot 2026-08-04 104140" src="https://github.com/user-attachments/assets/6f12273c-c2a9-4818-a22f-2d338553e60c" />
+<img width="1166" height="656" alt="Screenshot 2026-08-04 121913" src="https://github.com/user-attachments/assets/321e0aaa-865d-43dd-bfb9-d51b62bec30c" />
+
 
 # Netflix Content Analysis Dashboard
 
