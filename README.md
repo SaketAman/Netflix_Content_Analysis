@@ -11,7 +11,7 @@ This dashboard visualizes Netflix's content catalog — 5,837 verified titles sp
 |---|---|
 | Total Revenue (USD millions) | 45.91K |
 | Total Shows | 5.837K |
-| Total Country (distinct country field values) | 528 |
+| Country of release | 72 |
 | Average Rating | 6.51 |
 
 ---
@@ -43,7 +43,7 @@ The dashboard is built on the **cleaned** version of the dataset, not the raw fi
 Four headline cards summarizing the filtered selection:
 - **Total Revenue (USD millions)** — sum of `box_revenue` (Movies only; TV Shows have no box revenue by design).
 - **Total Shows** — count of titles in the current filter context.
-- **Total Country** — distinct count of the `country` field. *Note: this counts distinct multi-country strings (e.g. "India, United States" is its own value), not distinct individual countries — there are 71 unique individual countries in the data. Consider swapping this measure to a distinct count of the exploded/primary country field for a more intuitive metric.*
+- **Country of release** — distinct count of primary country of release across all titles: 71 identified countries plus 1 "Unknown" bucket for titles with no country data (72 total).
 - **Average Rating** — mean IMDb rating across the filtered titles.
 
 ### Genre Table
@@ -83,10 +83,10 @@ Donut chart breaking down title share by country: United States (49.7%), India (
 
 ## Known Limitations
 - `box_revenue` and revenue-based visuals apply to Movies only — TV Shows have no comparable metric in this dataset.
-- The **Total Country** KPI card measures distinct *country field values* (including multi-country combinations), not distinct individual countries; treat it as a proxy rather than an exact country count.
+- The **Country of release** figure of 72 includes an "Unknown" bucket for the 7.3% of titles with no country data; 71 countries have a confirmed release country.
 - Director, cast, and country fields have meaningful missingness (see table above) — visuals built on these fields reflect only the titles with known values.
 
 ## Files
-- `Netfilx Dashboard.pbix` — Power BI dashboard file consisting all the charts and KPIs.
-- `Netflix_Cleaned_Analysis.xlsx` — original raw source file, cleaned dataset, synthetic-record audit, and summary tables/charts used to build this dashboard.
-- `Netfilx_Analytics_Presentation.pptx` — This is the presentation file for better understanding.
+- Netfilx Dashboard.pbix — Power BI dashboard file consisting all the charts and KPIs.
+- Netflix_Cleaned_Analysis.xlsx — original raw source file, cleaned dataset, synthetic-record audit, and summary tables/charts used to build this dashboard.
+- Netfilx_Analytics_Presentation.pptx — This is the presentation file for better understanding.
